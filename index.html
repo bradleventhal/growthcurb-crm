@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>SiteDrop CRM</title><link rel="stylesheet" href="styles.css"/></head><body>
+<header><h1>SiteDrop CRM</h1><p>Lead + Build + Revenue Pipeline</p></header>
+<main>
+<section class="card"><h2>Add Prospect</h2><form id="prospectForm"><div class="grid">
+<label>Prospect Name<input name="name" required/></label><label>Category<input name="category" required/></label><label>Location<input name="location" required/></label><label>Current Website<input name="website"/></label>
+<label>Contact Name<input name="contactName"/></label><label>Email<input name="email" type="email"/></label><label>Phone<input name="phone"/></label>
+<label>Pipeline Status<select name="pipelineStatus"><option>Lead</option><option>Contacted</option><option>Demo Sent</option><option>Interested</option><option>Closed</option><option>Active Client</option></select></label>
+<label>Site Build Status<select name="siteBuildStatus"><option>Not Started</option><option>Building</option><option>QA</option><option>Deployed</option><option>Live</option></select></label>
+<label>Monthly Amount<input name="monthlyRevenue" type="number" step="0.01" value="0"/></label><label>Start Date<input name="revenueStartDate" type="date"/></label>
+</div><label>Notes/Activity Log<textarea name="notes" rows="3"></textarea></label><button type="submit">Add Prospect</button></form></section>
+<section class="card"><h2>Prospects</h2><div id="summary"></div><div class="table-wrap"><table id="prospectsTable"><thead><tr><th>Name</th><th>Category</th><th>Location</th><th>Website</th><th>Pipeline</th><th>Build</th><th>Contact</th><th>Notes</th><th>Monthly</th><th>Start</th><th>Action</th></tr></thead><tbody></tbody></table></div></section>
+</main><script src="app.js"></script></body></html>
