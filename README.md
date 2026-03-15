@@ -1,6 +1,6 @@
-# LocalLift CRM
+# GrowthCurb CRM
 
-Working web-based CRM dashboard for LocalLift.
+Working web-based CRM dashboard for GrowthCurb.
 
 Tracks:
 - Prospect name, category, location, current website status

@@ -1,4 +1,4 @@
-const STORAGE_KEY = 'locallift_crm_v2_data';
+const STORAGE_KEY = 'growthcurb_crm_v2_data';
 const STATUSES = ['Lead','Contacted','Demo Sent','Interested','Closed','Active'];
 const ADDON_PRICING = {
   seo_boost: {label:'SEO Boost', price:79},
@@ -56,7 +56,7 @@ async function seed() {
       siteUrl: r.siteUrl || r.website || '',
       launchDate: r.launchDate || r.revenueStartDate || '',
       notes: r.notes || '',
-      activityLog: Array.isArray(r.activityLog) ? r.activityLog : [`${todayTs()} — Imported from LocalLift prospect list`]
+      activityLog: Array.isArray(r.activityLog) ? r.activityLog : [`${todayTs()} — Imported from GrowthCurb prospect list`]
     };
   });
   localStorage.setItem(STORAGE_KEY, JSON.stringify(normalized));
