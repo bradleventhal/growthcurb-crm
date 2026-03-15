@@ -1,5 +1,11 @@
-const STORAGE_KEY = 'sitedrop_crm_v2_data';
+const STORAGE_KEY = 'locallift_crm_v2_data';
 const STATUSES = ['Lead','Contacted','Demo Sent','Interested','Closed','Active'];
+const ADDON_PRICING = {
+  seo_boost: {label:'SEO Boost', price:79},
+  review_management: {label:'Review Management', price:49},
+  ai_chat: {label:'AI Chat Widget', price:59},
+  monthly_content: {label:'Monthly Content', price:99},
+};
 
 const pipelineEl = document.getElementById('pipeline');
 const metricsEl = document.getElementById('metrics');
@@ -20,6 +26,7 @@ let clients = [];
 
 const money = n => Number(n || 0).toLocaleString(undefined, {maximumFractionDigits:2});
 const todayTs = () => new Date().toISOString().slice(0,16).replace('T',' ');
+const addonTotal = (addOns=[]) => addOns.reduce((s,k)=>s+(ADDON_PRICING[k]?.price||0),0);
 
 async function seed() {
   const local = localStorage.getItem(STORAGE_KEY);
@@ -27,39 +34,42 @@ async function seed() {
 
   const res = await fetch('data.json');
   const raw = await res.json();
-  const normalized = raw.map(r => ({
-    id: crypto.randomUUID(),
-    name: r.name || '',
-    category: r.category || '',
-    location: r.location || '',
-    website: r.website || '',
-    websiteStatus: r.websiteStatus || '',
-    contactName: r.contactName || '',
-    email: r.email || '',
-    phone: r.phone || '',
-    pipelineStatus: STATUSES.includes(r.pipelineStatus) ? r.pipelineStatus : 'Lead',
-    siteBuildStatus: r.siteBuildStatus || 'Not Started',
-    packageSelected: r.packageSelected || 'Starter',
-    monthlySpend: Number(r.monthlySpend ?? r.monthlyRevenue ?? 0),
-    siteUrl: r.siteUrl || r.website || '',
-    launchDate: r.launchDate || r.revenueStartDate || '',
-    notes: r.notes || '',
-    activityLog: Array.isArray(r.activityLog) ? r.activityLog : [`${todayTs()} — Imported from prospect list`]
-  }));
+  const normalized = raw.map(r => {
+    const addOns = Array.isArray(r.addOns) ? r.addOns : [];
+    const basePrice = Number(r.basePrice ?? r.monthlySpend ?? r.monthlyRevenue ?? 0);
+    return {
+      id: crypto.randomUUID(),
+      name: r.name || '',
+      category: r.category || '',
+      location: r.location || '',
+      website: r.website || '',
+      websiteStatus: r.websiteStatus || '',
+      contactName: r.contactName || '',
+      email: r.email || '',
+      phone: r.phone || '',
+      pipelineStatus: STATUSES.includes(r.pipelineStatus) ? r.pipelineStatus : 'Lead',
+      siteBuildStatus: r.siteBuildStatus || 'Not Started',
+      packageSelected: r.packageSelected || 'Core',
+      basePrice,
+      addOns,
+      monthlySpend: Number(r.monthlySpend ?? (basePrice + addonTotal(addOns))),
+      siteUrl: r.siteUrl || r.website || '',
+      launchDate: r.launchDate || r.revenueStartDate || '',
+      notes: r.notes || '',
+      activityLog: Array.isArray(r.activityLog) ? r.activityLog : [`${todayTs()} — Imported from LocalLift prospect list`]
+    };
+  });
   localStorage.setItem(STORAGE_KEY, JSON.stringify(normalized));
   return normalized;
 }
 
-function save() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(clients));
-}
+function save() { localStorage.setItem(STORAGE_KEY, JSON.stringify(clients)); }
 
 function applyFilters(items) {
   const fStatus = filters.status.value;
   const fCat = filters.category.value;
   const fLoc = filters.location.value;
   const q = filters.search.value.trim().toLowerCase();
-
   return items.filter(c => {
     const hitStatus = !fStatus || c.pipelineStatus === fStatus;
     const hitCat = !fCat || c.category === fCat;
@@ -71,33 +81,32 @@ function applyFilters(items) {
 }
 
 function renderMetrics(items) {
-  const mrr = items.filter(c => c.pipelineStatus === 'Active').reduce((s,c)=>s+Number(c.monthlySpend||0),0);
-  const active = items.filter(c => c.pipelineStatus === 'Active').length;
-  const avg = active ? mrr / active : 0;
-
+  const active = items.filter(c => c.pipelineStatus === 'Active');
+  const mrr = active.reduce((s,c)=>s+Number(c.monthlySpend||0),0);
+  const avg = active.length ? mrr / active.length : 0;
   const values = [
     ['Total Clients', items.length],
-    ['Active Clients', active],
+    ['Active Clients', active.length],
     ['Total MRR', `$${money(mrr)}`],
     ['Average Spend', `$${money(avg)}`],
   ];
-
   metricsEl.innerHTML = values.map(([k,v]) => `<div class="metric"><div class="k">${k}</div><div class="v">${v}</div></div>`).join('');
 }
 
 function renderFilters(items) {
-  const unique = (arr) => [...new Set(arr.filter(Boolean))].sort((a,b)=>a.localeCompare(b));
-  const cats = unique(items.map(c => c.category));
-  const locs = unique(items.map(c => c.location));
-
+  const unique = arr => [...new Set(arr.filter(Boolean))].sort((a,b)=>a.localeCompare(b));
   const patchOptions = (el, list) => {
     const current = el.value;
     el.innerHTML = '<option value="">All</option>' + list.map(v => `<option>${v}</option>`).join('');
     if (list.includes(current)) el.value = current;
   };
   patchOptions(filters.status, STATUSES);
-  patchOptions(filters.category, cats);
-  patchOptions(filters.location, locs);
+  patchOptions(filters.category, unique(items.map(c=>c.category)));
+  patchOptions(filters.location, unique(items.map(c=>c.location)));
+}
+
+function addOnLabels(addOns=[]){
+  return addOns.map(k=>ADDON_PRICING[k]?.label).filter(Boolean).join(', ') || 'None';
 }
 
 function clientCard(c) {
@@ -109,6 +118,7 @@ function clientCard(c) {
       <span class="chip">${c.packageSelected}</span>
       <span class="chip">$${money(c.monthlySpend)}/mo</span>
     </div>
+    <div class="meta">Add-ons: ${addOnLabels(c.addOns)}</div>
     <div class="actions">
       <button data-action="prev">◀</button>
       <button data-action="next">▶</button>
@@ -120,8 +130,8 @@ function clientCard(c) {
 
 function renderPipeline(items) {
   pipelineEl.innerHTML = STATUSES.map(s => {
-    const cards = items.filter(c => c.pipelineStatus === s).map(clientCard).join('');
-    return `<section class="col"><h3>${s} <span>${items.filter(c => c.pipelineStatus===s).length}</span></h3><div class="stack">${cards || ''}</div></section>`;
+    const colItems = items.filter(c => c.pipelineStatus === s);
+    return `<section class="col"><h3>${s} <span>${colItems.length}</span></h3><div class="stack">${colItems.map(clientCard).join('')}</div></section>`;
   }).join('');
 }
 
@@ -135,6 +145,7 @@ function render() {
 function openDetail(id) {
   const c = clients.find(x => x.id === id);
   if (!c) return;
+  const addOnBreakdown = (c.addOns||[]).map(k=>`<li>${ADDON_PRICING[k]?.label||k}: $${money(ADDON_PRICING[k]?.price||0)}</li>`).join('');
   detailContent.innerHTML = `
     <h3>${c.name}</h3>
     <div class="detail-grid">
@@ -146,6 +157,8 @@ function openDetail(id) {
           <strong>Location</strong><span>${c.location}</span>
           <strong>Website Status</strong><span>${c.websiteStatus || ''}</span>
           <strong>Package</strong><span>${c.packageSelected}</span>
+          <strong>Base Price</strong><span>$${money(c.basePrice)}</span>
+          <strong>Add-ons</strong><span>${addOnLabels(c.addOns)}</span>
           <strong>Monthly Spend</strong><span>$${money(c.monthlySpend)}</span>
           <strong>Site URL</strong><span>${c.siteUrl || c.website || ''}</span>
           <strong>Launch Date</strong><span>${c.launchDate || ''}</span>
@@ -153,6 +166,8 @@ function openDetail(id) {
           <strong>Pipeline</strong><span>${c.pipelineStatus}</span>
           <strong>Build Status</strong><span>${c.siteBuildStatus}</span>
         </div>
+        <h4 style="margin-top:10px">Pricing Breakdown</h4>
+        <ul class="log"><li>Base: $${money(c.basePrice)}</li>${addOnBreakdown}</ul>
       </div>
       <div class="panel">
         <h4>Activity Log</h4>
@@ -165,8 +180,7 @@ function openDetail(id) {
     </div>
   `;
 
-  const form = detailContent.querySelector('#activityForm');
-  form.addEventListener('submit', (e) => {
+  detailContent.querySelector('#activityForm').addEventListener('submit', (e) => {
     e.preventDefault();
     const input = detailContent.querySelector('#activityInput');
     const note = input.value.trim();
@@ -177,7 +191,6 @@ function openDetail(id) {
     openDetail(id);
     render();
   });
-
   detailDialog.showModal();
 }
 
@@ -188,10 +201,8 @@ function moveStatus(id, dir) {
   const next = i + dir;
   if (next < 0 || next >= STATUSES.length) return;
   c.pipelineStatus = STATUSES[next];
-  c.activityLog = c.activityLog || [];
-  c.activityLog.unshift(`${todayTs()} — Moved to ${c.pipelineStatus}`);
-  save();
-  render();
+  (c.activityLog ||= []).unshift(`${todayTs()} — Moved to ${c.pipelineStatus}`);
+  save(); render();
 }
 
 pipelineEl.addEventListener('click', (e) => {
@@ -204,28 +215,38 @@ pipelineEl.addEventListener('click', (e) => {
   if (action === 'prev') moveStatus(id, -1);
   if (action === 'next') moveStatus(id, +1);
   if (action === 'detail') openDetail(id);
-  if (action === 'delete') {
-    clients = clients.filter(c => c.id !== id);
-    save();
-    render();
-  }
+  if (action === 'delete') { clients = clients.filter(c => c.id !== id); save(); render(); }
 });
 
 addBtn.addEventListener('click', () => clientDialog.showModal());
 clientForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  const f = Object.fromEntries(new FormData(clientForm).entries());
+  const fd = new FormData(clientForm);
+  const addOns = fd.getAll('addOns');
+  const basePrice = Number(fd.get('basePrice') || 0);
   const c = {
     id: crypto.randomUUID(),
-    ...f,
-    monthlySpend: Number(f.monthlySpend || 0),
+    name: fd.get('name') || '',
+    category: fd.get('category') || '',
+    location: fd.get('location') || '',
+    website: fd.get('website') || '',
+    websiteStatus: fd.get('websiteStatus') || '',
+    contactName: fd.get('contactName') || '',
+    email: fd.get('email') || '',
+    phone: fd.get('phone') || '',
+    pipelineStatus: fd.get('pipelineStatus') || 'Lead',
+    siteBuildStatus: fd.get('siteBuildStatus') || 'Not Started',
+    packageSelected: fd.get('packageSelected') || 'Core',
+    basePrice,
+    addOns,
+    monthlySpend: basePrice + addonTotal(addOns),
+    siteUrl: fd.get('siteUrl') || fd.get('website') || '',
+    launchDate: fd.get('launchDate') || '',
+    notes: fd.get('notes') || '',
     activityLog: [`${todayTs()} — Client created`]
   };
   clients.unshift(c);
-  save();
-  render();
-  clientForm.reset();
-  clientDialog.close();
+  save(); render(); clientForm.reset(); clientDialog.close();
 });
 
 Object.values(filters).forEach(el => el.addEventListener('input', render));
@@ -238,8 +259,11 @@ detailDialog.addEventListener('click', (e) => {
 
 (async function init(){
   clients = await seed();
-  // map legacy Active Client -> Active
-  clients.forEach(c => { if (c.pipelineStatus === 'Active Client') c.pipelineStatus = 'Active'; });
-  save();
-  render();
+  clients.forEach(c => {
+    if (c.pipelineStatus === 'Active Client') c.pipelineStatus = 'Active';
+    c.basePrice = Number(c.basePrice ?? c.monthlySpend ?? 0);
+    c.addOns = Array.isArray(c.addOns) ? c.addOns : [];
+    c.monthlySpend = Number(c.monthlySpend ?? (c.basePrice + addonTotal(c.addOns)));
+  });
+  save(); render();
 })();

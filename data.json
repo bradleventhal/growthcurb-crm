@@ -10,7 +10,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "High confidence contact path (directory/social present)",
@@ -18,7 +18,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "George The Plumber",
@@ -31,7 +35,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "High confidence contact path (directory/social present)",
@@ -39,7 +43,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "The Neighborhood Plumber (Scott Findlay)",
@@ -52,7 +60,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "High confidence contact path (directory/social present)",
@@ -60,7 +68,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "Anastasia Plumbing Services",
@@ -73,7 +85,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "High confidence contact path (directory/social present)",
@@ -81,7 +93,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "Phoenix Plumbing, LLC",
@@ -94,7 +110,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "High confidence contact path (directory/social present)",
@@ -102,7 +118,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "Drain Doctor Plumbing & Drain Cleaning",
@@ -115,7 +135,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "High confidence contact path (directory/social present)",
@@ -123,7 +143,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "G.A. Landscaping",
@@ -136,7 +160,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "High confidence contact path (directory/social present)",
@@ -144,7 +168,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "Home Tech (HVAC/Handyman)",
@@ -157,7 +185,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "High confidence contact path (directory/social present)",
@@ -165,7 +193,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "SP Heating & Air",
@@ -178,7 +210,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "Low confidence (manual verification required)",
@@ -186,7 +218,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "Shark Plumbing LLC",
@@ -199,7 +235,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "Low confidence (manual verification required)",
@@ -207,7 +243,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "Additional Home Solutions",
@@ -220,7 +260,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "Medium confidence (existing web presence needs upgrade)",
@@ -228,7 +268,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "Cumming Roofing Company",
@@ -241,7 +285,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "Low confidence (manual verification required)",
@@ -249,7 +293,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "Tom and Jerry's Roofing",
@@ -262,7 +310,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "Low confidence (manual verification required)",
@@ -270,7 +318,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "R Tillery Heating & Air",
@@ -283,7 +335,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "Low confidence (manual verification required)",
@@ -291,7 +343,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "Hometown Heating & Air",
@@ -304,7 +360,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "Low confidence (manual verification required)",
@@ -312,7 +368,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "Alpha Lan Medical Spa",
@@ -325,7 +385,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "Medium confidence (existing web presence needs upgrade)",
@@ -333,7 +393,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "SAHA Med Spa",
@@ -346,7 +410,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "Medium confidence",
@@ -354,7 +418,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "Baltic Deli (also serves as caf\u00e9/restaurant)",
@@ -367,7 +435,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "High confidence contact path (directory/social present)",
@@ -375,7 +443,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "Minstons Jamaican Deli",
@@ -388,7 +460,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "Low confidence (manual verification required)",
@@ -396,7 +468,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "Fry Me 2 The Moon",
@@ -409,7 +485,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "Low confidence (manual verification required)",
@@ -417,7 +493,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "Fresco Cantina Grille",
@@ -430,7 +510,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "Low confidence (manual verification required)",
@@ -438,7 +518,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "Bey Mediterranean",
@@ -451,7 +535,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "Medium confidence",
@@ -459,7 +543,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "Loyal Q and Brew",
@@ -472,7 +560,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "Low confidence (manual verification required)",
@@ -480,7 +568,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "Old Milton Dental (Dr. Corey Mazer)",
@@ -493,7 +585,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "Low confidence (manual verification required)",
@@ -501,7 +593,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "Polish Dental Center",
@@ -514,7 +610,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "Low confidence (manual verification required)",
@@ -522,7 +618,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "R. Lee Pennington, CPA, LLC",
@@ -535,7 +635,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "Medium confidence",
@@ -543,7 +643,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "Pro-Fi 20/20 (Dental CPAs)",
@@ -556,7 +660,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "Medium confidence",
@@ -564,7 +668,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "ITS by Jay (Residential Electrician)",
@@ -577,7 +685,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "Medium confidence (existing web presence needs upgrade)",
@@ -585,7 +693,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "Crafty Canuck Handyman LLC",
@@ -598,7 +710,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "Medium confidence",
@@ -606,7 +718,11 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   },
   {
     "name": "JB Pro Handyman",
@@ -619,7 +735,7 @@
     "phone": "",
     "pipelineStatus": "Lead",
     "siteBuildStatus": "Not Started",
-    "notes": "Imported from SITEDROP_PROSPECT_LIST.md",
+    "notes": "Imported from LocalLift prospect list",
     "monthlyRevenue": 0,
     "revenueStartDate": "",
     "contactQuality": "Medium confidence (existing web presence needs upgrade)",
@@ -627,6 +743,10 @@
     "activityLog": [
       "Imported from SITEDROP_PROSPECT_LIST.md on 2026-03-15",
       "Set initial pipeline status: Lead"
-    ]
+    ],
+    "packageSelected": "Core",
+    "basePrice": 0.0,
+    "addOns": [],
+    "monthlySpend": 0.0
   }
 ]

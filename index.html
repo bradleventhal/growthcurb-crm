@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SiteDrop CRM v2</title>
+  <title>LocalLift CRM v2</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="topbar">
     <div>
-      <h1>SiteDrop CRM <span class="v2">v2</span></h1>
+      <h1>LocalLift CRM <span class="v2">v2</span></h1>
       <p>Pipeline, client ops, activity, and MRR command center</p>
     </div>
     <button id="addClientBtn" class="btn-primary">+ Add Client</button>
@@ -62,13 +62,20 @@
         </label>
         <label>Package Selected
           <select name="packageSelected">
-            <option>Starter</option><option>Growth</option><option>Pro</option>
+            <option>Core</option><option>Growth</option><option>Pro</option>
           </select>
         </label>
-        <label>Monthly Spend ($)<input name="monthlySpend" type="number" step="0.01" min="0" value="0" /></label>
+        <label>Base Price ($/mo)<input name="basePrice" type="number" step="0.01" min="0" value="199" /></label>
         <label>Site URL<input name="siteUrl" placeholder="https://..." /></label>
         <label>Launch Date<input name="launchDate" type="date" /></label>
       </div>
+      <fieldset class="addons">
+        <legend>Service Add-ons</legend>
+        <label><input type="checkbox" name="addOns" value="seo_boost" /> SEO Boost (+$79)</label>
+        <label><input type="checkbox" name="addOns" value="review_management" /> Review Management (+$49)</label>
+        <label><input type="checkbox" name="addOns" value="ai_chat" /> AI Chat Widget (+$59)</label>
+        <label><input type="checkbox" name="addOns" value="monthly_content" /> Monthly Content (+$99)</label>
+      </fieldset>
       <label>Notes<textarea name="notes" rows="3"></textarea></label>
       <menu>
         <button value="cancel">Cancel</button>

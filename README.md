@@ -1,13 +1,15 @@
-# SiteDrop CRM
+# LocalLift CRM
 
-Working web-based CRM dashboard for SiteDrop.
+Working web-based CRM dashboard for LocalLift.
 
 Tracks:
-- Prospect name, category, location, current website
-- Pipeline: Lead > Contacted > Demo Sent > Interested > Closed > Active Client
+- Prospect name, category, location, current website status
+- Pipeline: Lead > Contacted > Demo Sent > Interested > Closed > Active
 - Contact info
-- Notes/activity log
+- Notes/activity log per client
 - Site build status: Not Started > Building > QA > Deployed > Live
-- Revenue: monthly amount, start date
+- Flexible pricing model: base price + selected add-ons
+- Service selection per client (SEO Boost, Review Management, AI Chat Widget, Monthly Content)
+- Revenue dashboard: total MRR, active client count, average spend
 
-Open `index.html` locally or via GitHub Pages.
+Persistence uses browser localStorage with first-load seeding from `data.json`.
